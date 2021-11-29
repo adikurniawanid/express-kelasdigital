@@ -1,5 +1,5 @@
-module.exports = (Sequelize, DataTypes) => {
-    const Media = sequelize.define('Media',{
+module.exports = (sequelize, DataTypes) => {
+    const Media = sequelize.define('Media', {
         id: {
             type: DataTypes.INTEGER,
             primaryKey: true,

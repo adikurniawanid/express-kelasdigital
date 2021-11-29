@@ -12,13 +12,13 @@ router.post('/', (req, res) => {
     return res.status(400).json({status: 'error', message: 'invalid base64'})
   }
 
-  base64Img.img(image, '.public/images', Date.now(), async (err, filepath)=> {
+  base64Img.img(image, './public/images', Date.now(), async (err, filepath)=> {
     if(err){
       return res.status(400).json({status: 'error', message: err.message})
     }
 
     const filename = filepath.split('/').pop();
-    const media = await Media.create({ image: `image/${filename}`});
+    const media = await Media.create({ image: `images/${filename}`});
 
     return res.json({
       status: 'success',

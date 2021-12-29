@@ -17,7 +17,7 @@ module.exports = {
         {
           name:"budi",
           profession:"Database Engineer",
-          role:"admin",
+          role:"student",
           email:"adikur@mail.com",
           password: await bycript.hash('adadeh', 10),
           created_at:new Date(),
